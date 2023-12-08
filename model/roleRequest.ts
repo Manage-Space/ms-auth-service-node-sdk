@@ -11,12 +11,13 @@
  */
 
 import { RequestFile } from './models';
+import { ERoles } from './eRoles';
 
 export class RoleRequest {
     /**
-    * Role codenames
+    * Role codenames associated with user.
     */
-    'roles': Array<string>;
+    'roles': Array<ERoles>;
 
     static discriminator: string | undefined = undefined;
 
@@ -24,7 +25,7 @@ export class RoleRequest {
         {
             "name": "roles",
             "baseName": "roles",
-            "type": "Array<string>"
+            "type": "Array<ERoles>"
         }    ];
 
     static getAttributeTypeMap() {

@@ -11,6 +11,7 @@
  */
 
 import { RequestFile } from './models';
+import { ERoles } from './eRoles';
 
 export class CreateAdminRequest {
     /**
@@ -38,9 +39,9 @@ export class CreateAdminRequest {
     */
     'password': string;
     /**
-    * Role codenames
+    * Role codenames associated with user.
     */
-    'roles': Array<string>;
+    'roles': Array<ERoles>;
     /**
     * Optional array of site ids for the specific organization.
     */
@@ -82,7 +83,7 @@ export class CreateAdminRequest {
         {
             "name": "roles",
             "baseName": "roles",
-            "type": "Array<string>"
+            "type": "Array<ERoles>"
         },
         {
             "name": "sites",

@@ -16,6 +16,7 @@ model/createAdmin200Response.ts
 model/createAdminPublicRequest.ts
 model/createAdminRequest.ts
 model/createUserResponse.ts
+model/eRoles.ts
 model/emailRequest.ts
 model/forbiddenError403Response.ts
 model/forbiddenError403ResponseError.ts

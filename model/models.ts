@@ -13,6 +13,7 @@ export * from './createAdmin200Response';
 export * from './createAdminPublicRequest';
 export * from './createAdminRequest';
 export * from './createUserResponse';
+export * from './eRoles';
 export * from './emailRequest';
 export * from './forbiddenError403Response';
 export * from './forbiddenError403ResponseError';
@@ -61,6 +62,7 @@ import { CreateAdmin200Response } from './createAdmin200Response';
 import { CreateAdminPublicRequest } from './createAdminPublicRequest';
 import { CreateAdminRequest } from './createAdminRequest';
 import { CreateUserResponse } from './createUserResponse';
+import { ERoles } from './eRoles';
 import { EmailRequest } from './emailRequest';
 import { ForbiddenError403Response } from './forbiddenError403Response';
 import { ForbiddenError403ResponseError } from './forbiddenError403ResponseError';
@@ -96,6 +98,7 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "ERoles": ERoles,
         "UserResponse.RolesEnum": UserResponse.RolesEnum,
 }
 
