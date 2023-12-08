@@ -34,7 +34,6 @@ model/refreshTokenResponse.ts
 model/resendVerification200Response.ts
 model/resetPasswordRequest.ts
 model/roleRequest.ts
-model/roleResponse.ts
 model/siteAssignmentRequest.ts
 model/unauthorizedError401Response.ts
 model/unauthorizedError401ResponseError.ts

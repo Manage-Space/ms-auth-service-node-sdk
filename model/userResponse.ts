@@ -11,7 +11,6 @@
  */
 
 import { RequestFile } from './models';
-import { RoleResponse } from './roleResponse';
 
 export class UserResponse {
     /**
@@ -25,7 +24,7 @@ export class UserResponse {
     /**
     * Middle name
     */
-    'middleName'?: string;
+    'middleName': string | null;
     /**
     * Last name
     */
@@ -49,23 +48,23 @@ export class UserResponse {
     /**
     * Updated by
     */
-    'updatedBy'?: string;
+    'updatedBy': string | null;
     /**
     * Created at.
     */
-    'createdAt': string;
+    'createdAt': Date;
     /**
     * Updated at.
     */
-    'updatedAt'?: string;
+    'updatedAt': Date | null;
     /**
-    * Role definitions associated with user.
+    * Role codenames associated with user.
     */
-    'roles': Array<RoleResponse>;
+    'roles': Array<UserResponse.RolesEnum>;
     /**
     * A list of sites associated with this user.
     */
-    'assignedSites': string;
+    'assignedSites': Array<string>;
 
     static discriminator: string | undefined = undefined;
 
@@ -118,22 +117,22 @@ export class UserResponse {
         {
             "name": "createdAt",
             "baseName": "createdAt",
-            "type": "string"
+            "type": "Date"
         },
         {
             "name": "updatedAt",
             "baseName": "updatedAt",
-            "type": "string"
+            "type": "Date"
         },
         {
             "name": "roles",
             "baseName": "roles",
-            "type": "Array<RoleResponse>"
+            "type": "Array<UserResponse.RolesEnum>"
         },
         {
             "name": "assignedSites",
             "baseName": "assignedSites",
-            "type": "string"
+            "type": "Array<string>"
         }    ];
 
     static getAttributeTypeMap() {
@@ -141,3 +140,14 @@ export class UserResponse {
     }
 }
 
+export namespace UserResponse {
+    export enum RolesEnum {
+        Ga = <any> 'GA',
+        Oa = <any> 'OA',
+        Sa = <any> 'SA',
+        M = <any> 'M',
+        O = <any> 'O',
+        W = <any> 'W',
+        Sm = <any> 'SM'
+    }
+}

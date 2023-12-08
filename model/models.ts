@@ -30,7 +30,6 @@ export * from './refreshTokenResponse';
 export * from './resendVerification200Response';
 export * from './resetPasswordRequest';
 export * from './roleRequest';
-export * from './roleResponse';
 export * from './siteAssignmentRequest';
 export * from './unauthorizedError401Response';
 export * from './unauthorizedError401ResponseError';
@@ -79,7 +78,6 @@ import { RefreshTokenResponse } from './refreshTokenResponse';
 import { ResendVerification200Response } from './resendVerification200Response';
 import { ResetPasswordRequest } from './resetPasswordRequest';
 import { RoleRequest } from './roleRequest';
-import { RoleResponse } from './roleResponse';
 import { SiteAssignmentRequest } from './siteAssignmentRequest';
 import { UnauthorizedError401Response } from './unauthorizedError401Response';
 import { UnauthorizedError401ResponseError } from './unauthorizedError401ResponseError';
@@ -98,6 +96,7 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
+        "UserResponse.RolesEnum": UserResponse.RolesEnum,
 }
 
 let typeMap: {[index: string]: any} = {
@@ -131,7 +130,6 @@ let typeMap: {[index: string]: any} = {
     "ResendVerification200Response": ResendVerification200Response,
     "ResetPasswordRequest": ResetPasswordRequest,
     "RoleRequest": RoleRequest,
-    "RoleResponse": RoleResponse,
     "SiteAssignmentRequest": SiteAssignmentRequest,
     "UnauthorizedError401Response": UnauthorizedError401Response,
     "UnauthorizedError401ResponseError": UnauthorizedError401ResponseError,
