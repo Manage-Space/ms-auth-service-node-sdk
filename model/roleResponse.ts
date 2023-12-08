@@ -11,16 +11,14 @@
  */
 
 import { RequestFile } from './models';
+import { ERoles } from './eRoles';
 
 export class RoleResponse {
     /**
     * Role ID
     */
-    'roleId': string;
-    /**
-    * Code name
-    */
-    'codeName': string;
+    'roleId': number;
+    'codeName': ERoles;
     /**
     * Display name
     */
@@ -36,12 +34,12 @@ export class RoleResponse {
         {
             "name": "roleId",
             "baseName": "roleId",
-            "type": "string"
+            "type": "number"
         },
         {
             "name": "codeName",
             "baseName": "codeName",
-            "type": "string"
+            "type": "ERoles"
         },
         {
             "name": "displayName",
@@ -59,3 +57,5 @@ export class RoleResponse {
     }
 }
 
+export namespace RoleResponse {
+}

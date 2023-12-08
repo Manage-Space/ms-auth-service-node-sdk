@@ -20,6 +20,7 @@ model/eRoles.ts
 model/emailRequest.ts
 model/forbiddenError403Response.ts
 model/forbiddenError403ResponseError.ts
+model/getRoles200Response.ts
 model/getUsers200Response.ts
 model/internalServerError500Response.ts
 model/internalServerError500ResponseError.ts
@@ -35,6 +36,7 @@ model/refreshTokenResponse.ts
 model/resendVerification200Response.ts
 model/resetPasswordRequest.ts
 model/roleRequest.ts
+model/roleResponse.ts
 model/siteAssignmentRequest.ts
 model/unauthorizedError401Response.ts
 model/unauthorizedError401ResponseError.ts

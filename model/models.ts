@@ -17,6 +17,7 @@ export * from './eRoles';
 export * from './emailRequest';
 export * from './forbiddenError403Response';
 export * from './forbiddenError403ResponseError';
+export * from './getRoles200Response';
 export * from './getUsers200Response';
 export * from './internalServerError500Response';
 export * from './internalServerError500ResponseError';
@@ -31,6 +32,7 @@ export * from './refreshTokenResponse';
 export * from './resendVerification200Response';
 export * from './resetPasswordRequest';
 export * from './roleRequest';
+export * from './roleResponse';
 export * from './siteAssignmentRequest';
 export * from './unauthorizedError401Response';
 export * from './unauthorizedError401ResponseError';
@@ -66,6 +68,7 @@ import { ERoles } from './eRoles';
 import { EmailRequest } from './emailRequest';
 import { ForbiddenError403Response } from './forbiddenError403Response';
 import { ForbiddenError403ResponseError } from './forbiddenError403ResponseError';
+import { GetRoles200Response } from './getRoles200Response';
 import { GetUsers200Response } from './getUsers200Response';
 import { InternalServerError500Response } from './internalServerError500Response';
 import { InternalServerError500ResponseError } from './internalServerError500ResponseError';
@@ -80,6 +83,7 @@ import { RefreshTokenResponse } from './refreshTokenResponse';
 import { ResendVerification200Response } from './resendVerification200Response';
 import { ResetPasswordRequest } from './resetPasswordRequest';
 import { RoleRequest } from './roleRequest';
+import { RoleResponse } from './roleResponse';
 import { SiteAssignmentRequest } from './siteAssignmentRequest';
 import { UnauthorizedError401Response } from './unauthorizedError401Response';
 import { UnauthorizedError401ResponseError } from './unauthorizedError401ResponseError';
@@ -119,6 +123,7 @@ let typeMap: {[index: string]: any} = {
     "EmailRequest": EmailRequest,
     "ForbiddenError403Response": ForbiddenError403Response,
     "ForbiddenError403ResponseError": ForbiddenError403ResponseError,
+    "GetRoles200Response": GetRoles200Response,
     "GetUsers200Response": GetUsers200Response,
     "InternalServerError500Response": InternalServerError500Response,
     "InternalServerError500ResponseError": InternalServerError500ResponseError,
@@ -133,6 +138,7 @@ let typeMap: {[index: string]: any} = {
     "ResendVerification200Response": ResendVerification200Response,
     "ResetPasswordRequest": ResetPasswordRequest,
     "RoleRequest": RoleRequest,
+    "RoleResponse": RoleResponse,
     "SiteAssignmentRequest": SiteAssignmentRequest,
     "UnauthorizedError401Response": UnauthorizedError401Response,
     "UnauthorizedError401ResponseError": UnauthorizedError401ResponseError,
