@@ -11,10 +11,10 @@
  */
 
 import { RequestFile } from './models';
-import { CreateUserResponse } from './createUserResponse';
+import { AdminGetUserResponse } from './adminGetUserResponse';
 
 export class CreateAdmin200Response {
-    'data'?: Array<CreateUserResponse>;
+    'data'?: Array<AdminGetUserResponse>;
     'success'?: boolean;
     'error'?: object;
 
@@ -24,7 +24,7 @@ export class CreateAdmin200Response {
         {
             "name": "data",
             "baseName": "data",
-            "type": "Array<CreateUserResponse>"
+            "type": "Array<AdminGetUserResponse>"
         },
         {
             "name": "success",

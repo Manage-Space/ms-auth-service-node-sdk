@@ -6,13 +6,11 @@ export * from './badRequestError400Response';
 export * from './badRequestError400ResponseError';
 export * from './baseError';
 export * from './codeDeliveryDetailsResponse';
-export * from './confirmAdminSignUp200Response';
 export * from './confirmPasswordResetRequest';
 export * from './confirmSignUpRequest';
 export * from './createAdmin200Response';
 export * from './createAdminPublicRequest';
 export * from './createAdminRequest';
-export * from './createUserResponse';
 export * from './eRoles';
 export * from './emailRequest';
 export * from './forbiddenError403Response';
@@ -31,6 +29,7 @@ export * from './refreshTokenRequest';
 export * from './refreshTokenResponse';
 export * from './resendVerification200Response';
 export * from './resetPasswordRequest';
+export * from './rolePermissionResponse';
 export * from './roleRequest';
 export * from './roleResponse';
 export * from './siteAssignmentRequest';
@@ -57,13 +56,11 @@ import { BadRequestError400Response } from './badRequestError400Response';
 import { BadRequestError400ResponseError } from './badRequestError400ResponseError';
 import { BaseError } from './baseError';
 import { CodeDeliveryDetailsResponse } from './codeDeliveryDetailsResponse';
-import { ConfirmAdminSignUp200Response } from './confirmAdminSignUp200Response';
 import { ConfirmPasswordResetRequest } from './confirmPasswordResetRequest';
 import { ConfirmSignUpRequest } from './confirmSignUpRequest';
 import { CreateAdmin200Response } from './createAdmin200Response';
 import { CreateAdminPublicRequest } from './createAdminPublicRequest';
 import { CreateAdminRequest } from './createAdminRequest';
-import { CreateUserResponse } from './createUserResponse';
 import { ERoles } from './eRoles';
 import { EmailRequest } from './emailRequest';
 import { ForbiddenError403Response } from './forbiddenError403Response';
@@ -82,6 +79,7 @@ import { RefreshTokenRequest } from './refreshTokenRequest';
 import { RefreshTokenResponse } from './refreshTokenResponse';
 import { ResendVerification200Response } from './resendVerification200Response';
 import { ResetPasswordRequest } from './resetPasswordRequest';
+import { RolePermissionResponse } from './rolePermissionResponse';
 import { RoleRequest } from './roleRequest';
 import { RoleResponse } from './roleResponse';
 import { SiteAssignmentRequest } from './siteAssignmentRequest';
@@ -113,13 +111,11 @@ let typeMap: {[index: string]: any} = {
     "BadRequestError400ResponseError": BadRequestError400ResponseError,
     "BaseError": BaseError,
     "CodeDeliveryDetailsResponse": CodeDeliveryDetailsResponse,
-    "ConfirmAdminSignUp200Response": ConfirmAdminSignUp200Response,
     "ConfirmPasswordResetRequest": ConfirmPasswordResetRequest,
     "ConfirmSignUpRequest": ConfirmSignUpRequest,
     "CreateAdmin200Response": CreateAdmin200Response,
     "CreateAdminPublicRequest": CreateAdminPublicRequest,
     "CreateAdminRequest": CreateAdminRequest,
-    "CreateUserResponse": CreateUserResponse,
     "EmailRequest": EmailRequest,
     "ForbiddenError403Response": ForbiddenError403Response,
     "ForbiddenError403ResponseError": ForbiddenError403ResponseError,
@@ -137,6 +133,7 @@ let typeMap: {[index: string]: any} = {
     "RefreshTokenResponse": RefreshTokenResponse,
     "ResendVerification200Response": ResendVerification200Response,
     "ResetPasswordRequest": ResetPasswordRequest,
+    "RolePermissionResponse": RolePermissionResponse,
     "RoleRequest": RoleRequest,
     "RoleResponse": RoleResponse,
     "SiteAssignmentRequest": SiteAssignmentRequest,

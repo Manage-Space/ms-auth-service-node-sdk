@@ -22,9 +22,9 @@ export class UserResponse {
     */
     'firstName': string;
     /**
-    * Middle name
+    * Middle initial
     */
-    'middleName': string | null;
+    'middleInitial': string | null;
     /**
     * Last name
     */
@@ -80,8 +80,8 @@ export class UserResponse {
             "type": "string"
         },
         {
-            "name": "middleName",
-            "baseName": "middleName",
+            "name": "middleInitial",
+            "baseName": "middleInitial",
             "type": "string"
         },
         {

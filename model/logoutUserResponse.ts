@@ -14,7 +14,7 @@ import { RequestFile } from './models';
 
 export class LogoutUserResponse {
     /**
-    * A valid user id.
+    * User ID
     */
     'userId': string;
 

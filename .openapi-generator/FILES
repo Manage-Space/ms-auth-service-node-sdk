@@ -9,13 +9,11 @@ model/badRequestError400Response.ts
 model/badRequestError400ResponseError.ts
 model/baseError.ts
 model/codeDeliveryDetailsResponse.ts
-model/confirmAdminSignUp200Response.ts
 model/confirmPasswordResetRequest.ts
 model/confirmSignUpRequest.ts
 model/createAdmin200Response.ts
 model/createAdminPublicRequest.ts
 model/createAdminRequest.ts
-model/createUserResponse.ts
 model/eRoles.ts
 model/emailRequest.ts
 model/forbiddenError403Response.ts
@@ -35,6 +33,7 @@ model/refreshTokenRequest.ts
 model/refreshTokenResponse.ts
 model/resendVerification200Response.ts
 model/resetPasswordRequest.ts
+model/rolePermissionResponse.ts
 model/roleRequest.ts
 model/roleResponse.ts
 model/siteAssignmentRequest.ts

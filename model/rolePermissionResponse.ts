@@ -12,32 +12,38 @@
 
 import { RequestFile } from './models';
 
-export class AttributeResponse {
+export class RolePermissionResponse {
     /**
-    * Attribute key
+    * Permission ID
     */
-    'name': string;
+    'permissionId': number;
+    '_function': string;
     /**
-    * Attribute value
+    * Detailed description.
     */
-    'value': string;
+    'description': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "name",
-            "baseName": "name",
+            "name": "permissionId",
+            "baseName": "permissionId",
+            "type": "number"
+        },
+        {
+            "name": "_function",
+            "baseName": "function",
             "type": "string"
         },
         {
-            "name": "value",
-            "baseName": "value",
+            "name": "description",
+            "baseName": "description",
             "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return AttributeResponse.attributeTypeMap;
+        return RolePermissionResponse.attributeTypeMap;
     }
 }
 

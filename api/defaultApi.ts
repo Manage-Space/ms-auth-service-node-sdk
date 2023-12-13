@@ -16,7 +16,6 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { BadRequestError400Response } from '../model/badRequestError400Response';
-import { ConfirmAdminSignUp200Response } from '../model/confirmAdminSignUp200Response';
 import { ConfirmPasswordResetRequest } from '../model/confirmPasswordResetRequest';
 import { ConfirmSignUpRequest } from '../model/confirmSignUpRequest';
 import { CreateAdmin200Response } from '../model/createAdmin200Response';
@@ -112,7 +111,7 @@ export class DefaultApi {
      * @summary Confirm admin
      * @param confirmSignUpRequest 
      */
-    public async confirmAdminSignUp (confirmSignUpRequest: ConfirmSignUpRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ConfirmAdminSignUp200Response;  }> {
+    public async confirmAdminSignUp (confirmSignUpRequest: ConfirmSignUpRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateAdmin200Response;  }> {
         const localVarPath = this.basePath + '/auth/orgs/users/confirm';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -160,13 +159,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: ConfirmAdminSignUp200Response;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateAdmin200Response;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "ConfirmAdminSignUp200Response");
+                            body = ObjectSerializer.deserialize(body, "CreateAdmin200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -181,7 +180,7 @@ export class DefaultApi {
      * @summary Confirm password reset
      * @param confirmPasswordResetRequest 
      */
-    public async confirmPasswordReset (confirmPasswordResetRequest: ConfirmPasswordResetRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ConfirmAdminSignUp200Response;  }> {
+    public async confirmPasswordReset (confirmPasswordResetRequest: ConfirmPasswordResetRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateAdmin200Response;  }> {
         const localVarPath = this.basePath + '/auth/password/confirm';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -229,13 +228,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: ConfirmAdminSignUp200Response;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateAdmin200Response;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "ConfirmAdminSignUp200Response");
+                            body = ObjectSerializer.deserialize(body, "CreateAdmin200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -251,7 +250,7 @@ export class DefaultApi {
      * @param orgId 
      * @param confirmSignUpRequest 
      */
-    public async confirmUserSignUp (orgId: string, confirmSignUpRequest: ConfirmSignUpRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: ConfirmAdminSignUp200Response;  }> {
+    public async confirmUserSignUp (orgId: string, confirmSignUpRequest: ConfirmSignUpRequest, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateAdmin200Response;  }> {
         const localVarPath = this.basePath + '/auth/orgs/{orgId}/users/confirm'
             .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)));
         let localVarQueryParameters: any = {};
@@ -305,13 +304,13 @@ export class DefaultApi {
                     localVarRequestOptions.form = localVarFormParams;
                 }
             }
-            return new Promise<{ response: http.IncomingMessage; body: ConfirmAdminSignUp200Response;  }>((resolve, reject) => {
+            return new Promise<{ response: http.IncomingMessage; body: CreateAdmin200Response;  }>((resolve, reject) => {
                 localVarRequest(localVarRequestOptions, (error, response, body) => {
                     if (error) {
                         reject(error);
                     } else {
                         if (response.statusCode && response.statusCode >= 200 && response.statusCode <= 299) {
-                            body = ObjectSerializer.deserialize(body, "ConfirmAdminSignUp200Response");
+                            body = ObjectSerializer.deserialize(body, "CreateAdmin200Response");
                             resolve({ response: response, body: body });
                         } else {
                             reject(new HttpError(response, body, response.statusCode));
@@ -534,7 +533,7 @@ export class DefaultApi {
      * @param orgId The Organization ID
      * @param userId The User Id
      */
-    public async getUserRoles (orgId: string, userId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetUsers200Response;  }> {
+    public async getUser (orgId: string, userId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: GetUsers200Response;  }> {
         const localVarPath = this.basePath + '/auth/orgs/{orgId}/users/{userId}'
             .replace('{' + 'orgId' + '}', encodeURIComponent(String(orgId)))
             .replace('{' + 'userId' + '}', encodeURIComponent(String(userId)));
@@ -551,12 +550,12 @@ export class DefaultApi {
 
         // verify required parameter 'orgId' is not null or undefined
         if (orgId === null || orgId === undefined) {
-            throw new Error('Required parameter orgId was null or undefined when calling getUserRoles.');
+            throw new Error('Required parameter orgId was null or undefined when calling getUser.');
         }
 
         // verify required parameter 'userId' is not null or undefined
         if (userId === null || userId === undefined) {
-            throw new Error('Required parameter userId was null or undefined when calling getUserRoles.');
+            throw new Error('Required parameter userId was null or undefined when calling getUser.');
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

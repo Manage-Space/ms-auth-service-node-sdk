@@ -12,6 +12,7 @@
 
 import { RequestFile } from './models';
 import { ERoles } from './eRoles';
+import { RolePermissionResponse } from './rolePermissionResponse';
 
 export class RoleResponse {
     /**
@@ -27,6 +28,10 @@ export class RoleResponse {
     * Description of the org admin role.
     */
     'description': string;
+    /**
+    * Role permissions (function, description)
+    */
+    'rolePermissions': Array<RolePermissionResponse>;
 
     static discriminator: string | undefined = undefined;
 
@@ -50,6 +55,11 @@ export class RoleResponse {
             "name": "description",
             "baseName": "description",
             "type": "string"
+        },
+        {
+            "name": "rolePermissions",
+            "baseName": "rolePermissions",
+            "type": "Array<RolePermissionResponse>"
         }    ];
 
     static getAttributeTypeMap() {

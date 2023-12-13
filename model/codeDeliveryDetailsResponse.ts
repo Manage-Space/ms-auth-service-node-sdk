@@ -14,15 +14,15 @@ import { RequestFile } from './models';
 
 export class CodeDeliveryDetailsResponse {
     /**
-    * The location the code has been sent to
+    * The location the code has been sent to.
     */
     'destination': string;
     /**
-    * The way the code was send
+    * The way the code was sent.
     */
     'deliveryMedium': string;
     /**
-    * The name of the attribute
+    * The name of the attribute.
     */
     'attributeName': string;
 
@@ -31,17 +31,17 @@ export class CodeDeliveryDetailsResponse {
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
             "name": "destination",
-            "baseName": "Destination",
+            "baseName": "destination",
             "type": "string"
         },
         {
             "name": "deliveryMedium",
-            "baseName": "DeliveryMedium",
+            "baseName": "deliveryMedium",
             "type": "string"
         },
         {
             "name": "attributeName",
-            "baseName": "AttributeName",
+            "baseName": "attributeName",
             "type": "string"
         }    ];
 

@@ -15,35 +15,25 @@ import { AttributeResponse } from './attributeResponse';
 
 export class RefreshTokenResponse {
     /**
-    * Access Token
+    * User ID
     */
-    'accessToken': string;
+    'userId': string;
+    /**
+    * Array of attributes.
+    */
+    'userAttributes': Array<AttributeResponse>;
     /**
     * ID Token
     */
     'idToken': string;
     /**
-    * User ID
+    * Access Token
     */
-    'userId': string;
-    /**
-    * Array of attributes
-    */
-    'userAttributes': Array<AttributeResponse>;
+    'accessToken': string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "accessToken",
-            "baseName": "accessToken",
-            "type": "string"
-        },
-        {
-            "name": "idToken",
-            "baseName": "idToken",
-            "type": "string"
-        },
         {
             "name": "userId",
             "baseName": "userId",
@@ -53,6 +43,16 @@ export class RefreshTokenResponse {
             "name": "userAttributes",
             "baseName": "userAttributes",
             "type": "Array<AttributeResponse>"
+        },
+        {
+            "name": "idToken",
+            "baseName": "idToken",
+            "type": "string"
+        },
+        {
+            "name": "accessToken",
+            "baseName": "accessToken",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {

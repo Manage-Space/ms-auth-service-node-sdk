@@ -22,7 +22,7 @@ export class CreateAdminPublicRequest {
     */
     'lastName': string;
     /**
-    * Middle name
+    * Middle initial
     */
     'middleInitial'?: string;
     /**
