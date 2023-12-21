@@ -148,6 +148,7 @@ export namespace UserResponse {
         M = <any> 'M',
         O = <any> 'O',
         W = <any> 'W',
-        Sm = <any> 'SM'
+        Sm = <any> 'SM',
+        P = <any> 'P'
     }
 }
